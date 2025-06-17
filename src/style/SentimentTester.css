@@ -29,6 +29,8 @@
 }
 
 .sentiment-textarea {
+  background-color: #fff;
+  color: #000;
   width: 100%;
   height: 120px;
   font-size: 1.1rem;
@@ -81,6 +83,13 @@
   align-items: center;
   gap: 6px;
   cursor: pointer;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  border: none;
+  min-width: auto;
+  flex-shrink: 0;
 }
 
 .step-item.active {
