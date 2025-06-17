@@ -1,0 +1,184 @@
+.home-wrapper {
+  padding: 3rem 1.5rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  height: 300px;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background-color: white;
+}
+
+.upload-left {
+  background-color: #ff9800;
+  flex: 1;
+}
+
+.upload-right {
+  flex: 2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.csv-upload-input {
+  display: none;
+}
+
+.csv-upload-label {
+  display: inline-block;
+  background-color: transparent;
+  color: #ff9800;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 1rem;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.upload-note {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.loading-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #ffa500;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.result-section {
+  margin-top: 3rem;
+}
+
+.result-title {
+  font-size: 2rem;
+  color: #ff9800;
+  margin-bottom: 0.5rem;
+}
+
+.result-summary {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.result-box {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+.result-box h3 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.result-box span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.result-box.positif {
+  border-top: 4px solid #87eaf2;
+}
+
+.result-box.negatif {
+  border-top: 4px solid #ffa500;
+}
+
+.result-box.total {
+  border-top: 4px solid #999;
+}
+
+.result-chart {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 1024px) {
+  .upload-box {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .upload-left {
+    height: 120px;
+    flex: none;
+    width: 100%;
+  }
+
+  .upload-right {
+    padding: 1.5rem;
+  }
+
+  .result-title {
+    font-size: 1.8rem;
+  }
+
+  .result-box h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .csv-upload-label {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .upload-note {
+    font-size: 0.85rem;
+  }
+
+  .result-title {
+    font-size: 1.5rem;
+  }
+
+  .result-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .result-summary {
+    gap: 1rem;
+  }
+}

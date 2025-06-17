@@ -1,0 +1,54 @@
+/* Bagian wrapper: ini memastikan warna biru full 100% */
+.navbar-wrapper {
+  width: 100%;
+  background-color: #ffa500;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Bagian dalam: konten terpusat tapi fleksibel */
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* List menu */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Link item */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background-color: #a36303;
+  box-shadow: inset 0 -3px 0 0 #1d1300;
+}
+
+.icon {
+  font-size: 16px;
+}

@@ -1,0 +1,64 @@
+.result-wrapper {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: #f9fafb;
+}
+
+.result-title {
+  color: #ff9800;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-desc {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.csv-upload-input {
+  margin-bottom: 2rem;
+}
+
+.result-summary {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.result-box {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+}
+
+.result-box h3 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.result-box span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.result-box.positif {
+  border-top: 4px solid #87eaf2;
+}
+
+.result-box.negatif {
+  border-top: 4px solid #ffa500;
+}
+
+.result-box.total {
+  border-top: 4px solid #999;
+}
+
+.result-chart {
+  margin: 0 auto;
+  max-width: 500px;
+}
