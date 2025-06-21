@@ -225,3 +225,16 @@
     gap: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .result-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-box {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
