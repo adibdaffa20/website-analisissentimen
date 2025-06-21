@@ -12,8 +12,11 @@
   background-color: #fff;
   border-radius: 12px;
   padding: 40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(207, 123, 4, 0.1);
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .sentiment-title {
@@ -24,7 +27,7 @@
 
 .sentiment-desc {
   font-size: 1.2rem;
-  color: #555;
+  /* color: #555; */
   margin-bottom: 1.5rem;
 }
 
@@ -132,6 +135,8 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
+  overflow-x: auto;
+  display: block;
 }
 
 .result-table th,

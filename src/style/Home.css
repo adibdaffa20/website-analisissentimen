@@ -67,6 +67,49 @@
   animation: spin 1s linear infinite;
 }
 
+.evaluation-section {
+  background-color: #ffffff;
+  padding: 32px;
+  margin-top: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+}
+
+.evaluation-section h3 {
+  margin-top: 32px;
+  font-size: 22px;
+  color: #ff6600;
+  border-bottom: 2px solid #ff6600;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.evaluation-section pre {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: #333;
+  white-space: pre-wrap;
+  margin-top: 10px;
+}
+
+.evaluation-section img {
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
