@@ -1,9 +1,25 @@
+.home-wrapper {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: #f8f9fb;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
 .sentiment-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* sebelumnya center */
   padding: 3rem 1.5rem;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh; /* sebelumnya calc(100vh - 80px) */
+  background-color: #fdfdfd;
 }
 
 .sentiment-card {
@@ -14,8 +30,6 @@
   padding: 40px;
   box-shadow: 0 4px 12px rgba(207, 123, 4, 0.1);
   text-align: center;
-  width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -136,7 +150,9 @@
   border-collapse: collapse;
   margin-top: 1rem;
   overflow-x: auto;
-  display: block;
+  /* display: block; */
+  align-items: center;
+  justify-content: center;
 }
 
 .result-table th,
@@ -144,7 +160,9 @@
   border: 1px solid #ccc;
   padding: 12px;
   font-size: 1rem;
-  text-align: left;
+  text-align: center;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .result-table thead {
