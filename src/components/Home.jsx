@@ -58,33 +58,38 @@ const Home = () => {
       <div className="evaluation-section">
         <h3>Overall Statistics:</h3>
         <pre>
-        Mean Accuracy: 88.81% (+/- 1.82%)
-        Mean Loss: 0.3194 (+/- 0.0455)
+        Mean Accuracy: 89.00% (+/- 2.11%)
+        Mean Loss: 0.3144 (+/- 0.0305)
         </pre>
         <h3>Average Classification Metrics Across All Folds:</h3>
         <pre>
             Negatif Class:
-            - Precision: 0.870
-            - Recall: 0.912
-            - F1-Score: 0.890
+            - Precision: 0.869
+            - Recall: 0.920
+            - F1-Score: 0.893
 
             Positif Class:
-            - Precision: 0.910
-            - Recall: 0.864
-            - F1-Score: 0.886
+            - Precision: 0.918
+            - Recall: 0.860
+            - F1-Score: 0.887
 
             Overall Macro Average:
-            - Precision: 0.890
-            - Recall: 0.888
-            - F1-Score: 0.888
+            - Precision: 0.893
+            - Recall: 0.890
+            - F1-Score: 0.890
         </pre>
-        <h3>Confusion Matrix</h3>
+        <h3>Confusion Matrix Aggregated (All Folds)</h3>
         <img
         src="/images/confusion-matrix.png"
         alt="Confusion Matrix"
         style={{ maxWidth: "100%", height: "auto" }}
         />
-
+        <h4>Confusion Matrix Average (Across Folds)</h4>
+        <img
+        src="/images/confusion-matrix-avg.png"
+        alt="Confusion Matrix"
+        style={{ maxWidth: "100%", height: "auto" }}
+        />
       </div>
     </div>
   );
