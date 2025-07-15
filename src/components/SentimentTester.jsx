@@ -69,69 +69,67 @@ const SentimentTester = () => {
   ];
 
   return (
-    <div className="home-wrapper">
+    <div className="sentiment-fullscreen">
       <div className="sentiment-container">
-        <div className="sentiment-card">
-          <h2 className="sentiment-title">Test Sentimen</h2>
+        <h2 className="sentiment-title">Test Sentimen</h2>
 
-          <textarea
-            value={inputText}
-            onChange={handleInputChange}
-            placeholder="Ketik teks yang ingin dianalisis sentimennya..."
-            className="sentiment-textarea full-width"
-          />
+        <textarea
+          value={inputText}
+          onChange={handleInputChange}
+          placeholder="Ketik teks yang ingin dianalisis sentimennya..."
+          className="sentiment-textarea"
+        />
 
-          <button onClick={handleAnalyze} className="sentiment-button">
-            Analisis Sentimen
-          </button>
+        <button onClick={handleAnalyze} className="sentiment-button">
+          Analisis Sentimen
+        </button>
 
-          {sentimentLabel && (
-            <div className="sentiment-label-output">
-              <p><strong>Hasil Sentimen:</strong> {sentimentLabel}</p>
+        {sentimentLabel && (
+          <div className="sentiment-label-output">
+            <p><strong>Hasil Sentimen:</strong> {sentimentLabel}</p>
+          </div>
+        )}
+
+        {Object.keys(processed).length > 0 && (
+          <>
+            <div className="step-tabs">
+              {steps.map((s) => (
+                <button
+                  key={s.id}
+                  className={`step-item ${step === s.id ? "active" : ""}`}
+                  onClick={() => setStep(s.id)}
+                >
+                  <span className="step-number">{steps.indexOf(s) + 1}</span> {s.label}
+                </button>
+              ))}
             </div>
-          )}
 
-          {Object.keys(processed).length > 0 && (
-            <>
-              <div className="step-tabs">
-                {steps.map((s) => (
-                  <button
-                    key={s.id}
-                    className={`step-item ${step === s.id ? "active" : ""}`}
-                    onClick={() => setStep(s.id)}
-                  >
-                    <span className="step-number">{steps.indexOf(s) + 1}</span> {s.label}
-                  </button>
-                ))}
-              </div>
-
-              <div className="table-wrapper">
-                <table className="result-table full-width">
-                  <thead>
-                    <tr>
-                      <th>No.</th>
-                      <th>Teks Asli</th>
-                      <th>Hasil {steps.find((s) => s.id === step).label}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>{processed.original}</td>
-                      <td>
-                        {Array.isArray(processed[step])
-                          ? (step === "tokenized" || step === "stopRemoved")
-                            ? `['${processed[step].join("', '")}']`
-                            : `[${processed[step].join(", ")}]`
-                          : processed[step] || "-"}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </>
-          )}
-        </div>
+            <div className="table-wrapper">
+              <table className="result-table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Teks Asli</th>
+                    <th>Hasil {steps.find((s) => s.id === step).label}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>{processed.original}</td>
+                    <td>
+                      {Array.isArray(processed[step])
+                        ? (step === "tokenized" || step === "stopRemoved")
+                          ? `['${processed[step].join("', '")}']`
+                          : `[${processed[step].join(", ")}]`
+                        : processed[step] || "-"}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

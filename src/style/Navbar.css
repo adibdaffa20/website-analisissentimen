@@ -1,4 +1,4 @@
-/* Bagian wrapper: ini memastikan warna biru full 100% */
+/* Bagian wrapper: memastikan background full-lebar */
 .navbar-wrapper {
   width: 100%;
   background-color: #ffa500;
@@ -7,14 +7,14 @@
   z-index: 100;
 }
 
-/* Bagian dalam: konten terpusat tapi fleksibel */
+/* Bagian dalam: ubah agar ikut lebar penuh juga */
 .navbar-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;                /* ⬅️ ubah ini dari max-width ke width penuh */
   padding: 16px 24px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* List menu */
